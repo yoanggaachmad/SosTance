@@ -25,4 +25,10 @@ public class DataKebutuhanList {
     public void setData(String kebutuhan, String aksi){
         listKebutuhan.add(new DataKebutuhan(kebutuhan, aksi));
     }
+    
+    public void showData(){
+        for (int i = 0 ; i< 1 ; i++){
+            System.out.println(listKebutuhan.toString());
+        }
+    }
 }

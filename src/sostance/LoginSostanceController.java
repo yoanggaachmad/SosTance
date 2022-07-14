@@ -23,6 +23,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
@@ -110,6 +111,9 @@ public class LoginSostanceController implements Initializable {
         stage.setScene(new Scene(scene2));
         stage.show();
         stage.setTitle("Buat Akun");
+        
+        Image image = new Image("Gambar/padlock.png");
+        stage.getIcons().add(image);
         
     }
     

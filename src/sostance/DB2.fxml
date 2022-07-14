@@ -45,7 +45,7 @@
                                           <DropShadow />
                                        </effect>
                                     </ImageView>
-                                    <Button alignment="BOTTOM_CENTER" layoutX="407.0" layoutY="125.0" mnemonicParsing="false" prefHeight="133.0" prefWidth="142.0" style="-fx-background-color: #5e5f94;" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                                    <Button alignment="BOTTOM_CENTER" layoutX="361.0" layoutY="113.0" mnemonicParsing="false" prefHeight="133.0" prefWidth="142.0" style="-fx-background-color: #353641;" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
@@ -69,7 +69,7 @@
                                           </VBox>
                                        </graphic>
                                     </Button>
-                                    <Button alignment="BOTTOM_CENTER" layoutX="407.0" layoutY="266.0" mnemonicParsing="false" prefHeight="133.0" prefWidth="142.0" style="-fx-background-color: #353641;" textFill="WHITE">
+                                    <Button alignment="BOTTOM_CENTER" layoutX="285.0" layoutY="258.0" mnemonicParsing="false" prefHeight="133.0" prefWidth="142.0" style="-fx-background-color: #5E5f94;" textFill="WHITE">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
@@ -93,7 +93,7 @@
                                           </VBox>
                                        </graphic>
                                     </Button>
-                                    <Button alignment="BOTTOM_CENTER" layoutX="260.0" layoutY="266.0" mnemonicParsing="false" prefHeight="133.0" prefWidth="142.0" style="-fx-background-color: #5E5f94;" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                                    <Button alignment="BOTTOM_CENTER" layoutX="436.0" layoutY="258.0" mnemonicParsing="false" prefHeight="133.0" prefWidth="142.0" style="-fx-background-color: #5E5f94;" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
@@ -109,33 +109,6 @@
                                                    </VBox.margin>
                                                 </ImageView>
                                                 <Label text=" Modal Tempat Usaha" textAlignment="CENTER" textFill="WHITE" wrapText="true" />
-                                             </children>
-                                          </VBox>
-                                       </graphic>
-                                    </Button>
-                                    <Button alignment="BOTTOM_CENTER" layoutX="260.0" layoutY="125.0" mnemonicParsing="false" prefHeight="133.0" prefWidth="142.0" style="-fx-background-color: #353641;" textFill="WHITE">
-                                       <opaqueInsets>
-                                          <Insets />
-                                       </opaqueInsets>
-                                       <font>
-                                          <Font size="14.0" />
-                                       </font>
-                                       <graphic>
-                                          <VBox prefHeight="116.0" prefWidth="100.0">
-                                             <children>
-                                                <ImageView fitHeight="96.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true">
-                                                   <image>
-                                                      <Image url="@../Gambar/social-care.png" />
-                                                   </image>
-                                                   <VBox.margin>
-                                                      <Insets left="12.0" />
-                                                   </VBox.margin>
-                                                </ImageView>
-                                                <Label prefHeight="18.0" prefWidth="171.0" text="Bantuan Sosial" textFill="WHITE">
-                                                   <VBox.margin>
-                                                      <Insets left="22.0" />
-                                                   </VBox.margin>
-                                                </Label>
                                              </children>
                                           </VBox>
                                        </graphic>

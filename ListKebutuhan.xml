@@ -1,1 +1,1 @@
-<?xml version="1.0" ?><sostance.ArrayList><arrayList><null></null><sostance.IsiKebutuhan><kebutuhan>Minyak</kebutuhan><aksi>1</aksi></sostance.IsiKebutuhan><null></null><null></null><null></null><null></null><null></null><null></null><null></null><null></null></arrayList><size>2</size></sostance.ArrayList>
+<?xml version="1.0" ?><linked-list><sostance.DataKebutuhan><kebutuhan>testtt</kebutuhan><aksi></aksi></sostance.DataKebutuhan><sostance.DataKebutuhan><kebutuhan>ddd</kebutuhan><aksi></aksi></sostance.DataKebutuhan></linked-list>

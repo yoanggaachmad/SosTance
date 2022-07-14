@@ -4,48 +4,39 @@
  */
 package sostance;
 
-import javafx.beans.property.SimpleIntegerProperty;
-import javafx.beans.property.SimpleStringProperty;
-
 /**
  *
  * @author arulh
  */
 public class DataKebutuhan {
-
-    
-    private SimpleStringProperty kebutuhan;
-    private SimpleStringProperty aksi;
-    
-    
-    
-    public DataKebutuhan(){
-        this("","");
-    }
+    String kebutuhan;
+    String aksi;
 
     public DataKebutuhan(String kebutuhan, String aksi) {
-        this.kebutuhan = new SimpleStringProperty (kebutuhan);
-        this.aksi = new SimpleStringProperty (aksi);
+        this.kebutuhan = kebutuhan;
+        this.aksi = aksi;
+    }
+
+    public String getKebutuhan() {
+        return kebutuhan;
+    }
+
+    public void setKebutuhan(String kebutuhan) {
+        this.kebutuhan = kebutuhan;
+    }
+
+    public String getAksi() {
+        return aksi;
+    }
+
+    public void setAksi(String aksi) {
+        this.aksi = aksi;
+    }
+
+    @Override
+    public String toString() {
+        return "DataKebutuhan{" + "kebutuhan=" + kebutuhan + ", aksi=" + aksi + '}';
     }
     
-    public String getKebutuhan(){
-        return kebutuhan.get();
-    }
-    
-    public void setKebutuhan(String Kb){
-        this.kebutuhan.set(Kb);
-    }
-    
-    public String getAksi(){
-        return aksi.get();
-    }
-    
-    public void setAksi(String action){
-        this.aksi.set(action);
-    }
-    
-    static void remove(int i) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
     
 }
