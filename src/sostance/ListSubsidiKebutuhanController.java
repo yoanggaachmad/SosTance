@@ -307,21 +307,6 @@ public class ListSubsidiKebutuhanController implements Initializable {
         data.add(new PieChart.Data("2014", 4250));
         pcSubsidiKebutuhan.setData(data);
 
-//            String y = x.getKategori();
-//            switch (y) {
-//                case "Kuliner":
-//                    dataKuliner.add((IdeBisnis) ib.get(i));
-//                    break;
-//                case "Fashion":
-//                    dataFashion.add((IdeBisnis) ib.get(i));
-//                    break;
-//                case "Kerajinan":
-//                    dataKerajinan.add((IdeBisnis) ib.get(i));
-//                    break;
-//                case "Agrobisnis":
-//                    dataAgro.add((IdeBisnis) ib.get(i));
-//                    break;
-//            }
         cbalamat.setValue("");
         cbalamat.getItems().addAll("Sleman", "Yogyakarta", "Bantul", "Kulon Progo");
 
@@ -331,11 +316,8 @@ public class ListSubsidiKebutuhanController implements Initializable {
         tcstok.setCellValueFactory(new PropertyValueFactory<>("banyak"));
         tcalamat.setCellValueFactory(new PropertyValueFactory<>("alamat"));
 
-//        data1 = new SubsidiKebutuhanList();
-//        data1.setDummy();
         tvlistKebutuhanSubsidi.setItems(dataAll);
-//        
-//    
+        
     }
 
 }
