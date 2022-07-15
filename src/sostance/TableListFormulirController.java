@@ -10,6 +10,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.URL;
+import java.util.LinkedList;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import static javafx.collections.FXCollections.observableArrayList;
@@ -50,7 +51,7 @@ public class TableListFormulirController implements Initializable {
     private TableColumn <IsiFormulir, String> tcRadioButn;
     
     ObservableList dataFormulir = observableArrayList();
-    ArrayList<IsiFormulir> simpanFormulir = new ArrayList<>();
+    LinkedList<IsiFormulir> simpanFormulir = new LinkedList<>();
     XStream xstream = new XStream(new StaxDriver());
     
     
@@ -65,7 +66,7 @@ public class TableListFormulirController implements Initializable {
                 c = (char) isi;
                 s = s + c;
             }
-            simpanFormulir = (ArrayList<IsiFormulir>) xstream.fromXML(s);
+            simpanFormulir = (LinkedList<IsiFormulir>) xstream.fromXML(s);
             berkasMasuk.close();
         } catch (Exception e) {
             System.out.println("Terjadi kesalahan: " + e.getMessage());

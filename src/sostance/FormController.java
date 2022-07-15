@@ -10,6 +10,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.URL;
+import java.util.LinkedList;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -28,8 +29,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
-
-
 /**
  *
  * @author arulh
@@ -38,50 +37,47 @@ import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-
-
 public class FormController implements Initializable {
+
     ObservableList<PieChart.Data> data = FXCollections.observableArrayList();
-    
+
     @FXML
     private TextField NamaLengkap;
-    
+
     @FXML
     private RadioButton jens;
-    
+
     @FXML
     private RadioButton perm;
-    
+
     @FXML
     private ChoiceBox Agama;
-    
+
     @FXML
     private TextField Alamat;
-    
+
     @FXML
     private TextField NIK;
-    
+
     @FXML
     private TextField KK;
-    
+
     @FXML
     private ChoiceBox pekerjaan;
-    
+
     @FXML
     private Button simpan;
-    
+
     @FXML
     private Button tampilkan;
-    
-    
+
     @FXML
     private PieChart miski;
-    
-    private String pekerjaanm,Agamam,NamaLengkapm,NIKm,KKm,Alamatm,RadioButn;
-    ListIsiFormulir listformulir;
-        ArrayList<IsiFormulir> simpanFormulir = new ArrayList<>();
 
-    
+    private String pekerjaanm, Agamam, NamaLengkapm, NIKm, KKm, Alamatm, RadioButn;
+    ListIsiFormulir listformulir;
+    LinkedList<IsiFormulir> simpanFormulir = new LinkedList<>();
+
     @FXML
     private void ButtonTampilkanData(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("TableListFormulir.fxml"));
@@ -90,7 +86,8 @@ public class FormController implements Initializable {
         stage.setScene(new Scene(scene2));
         stage.show();
     }
-     void bukaData() {
+
+    void bukaData() {
         XStream xstream = new XStream(new StaxDriver());
         FileInputStream berkasMasuk;
         try {
@@ -102,20 +99,21 @@ public class FormController implements Initializable {
                 c = (char) isi;
                 s = s + c;
             }
-            simpanFormulir = (ArrayList<IsiFormulir>) xstream.fromXML(s);
+            simpanFormulir = (LinkedList<IsiFormulir>) xstream.fromXML(s);
             berkasMasuk.close();
         } catch (Exception e) {
             System.out.println("Terjadi kesalahan: " + e.getMessage());
         }
     }
+
     @FXML
     private void ButtonSimpan(ActionEvent event) throws IOException {
-    XStream xstream = new XStream(new StaxDriver());
-        
-    String tTipe = "";
+        XStream xstream = new XStream(new StaxDriver());
+
+        String tTipe = "";
         if (jens.isSelected()) {
             tTipe = "Laki laki";
-        }else if(perm.isSelected()){
+        } else if (perm.isSelected()) {
             tTipe = "Perempuan";
         }
         pekerjaanm = pekerjaan.getValue().toString();
@@ -124,48 +122,56 @@ public class FormController implements Initializable {
         NIKm = NIK.getText();
         KKm = KK.getText();
         Alamatm = Alamat.getText();
-        
+
         System.out.println(pekerjaan);
         System.out.println(Agama);
         System.out.println(NamaLengkap);
         System.out.println(NIK);
         System.out.println(KK);
         System.out.println(Alamat);
-        
+
         RadioButn = tTipe;
         System.out.println(RadioButn);
-        
+
         simpanFormulir.add(new IsiFormulir(pekerjaanm, Agamam, NamaLengkapm, NIKm, KKm, Alamatm, RadioButn));
         String xml = xstream.toXML(simpanFormulir);
         FileOutputStream outDoc;
-        try{
-            byte[]data = xml.getBytes("UTF-8");
+        try {
+            byte[] data = xml.getBytes("UTF-8");
             outDoc = new FileOutputStream("ListTempatFormulir.xml");
             outDoc.write(data);
             outDoc.close();
-        } catch(Exception io){
+        } catch (Exception io) {
             System.err.println("An error occurs: " + io.getMessage());
         }
         System.out.println("Data sudah disimpan");
     }
     
-    
+    @FXML
+    private void Chart(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("ChartClass.fxml"));
+        Parent scene2 = loader.load();
+        Stage stage = new Stage();
+        stage.setScene(new Scene(scene2));
+        stage.show();
+    }
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         listformulir = new ListIsiFormulir();
-        data.add(new PieChart.Data("2010",2880));
-        data.add(new PieChart.Data("2011",3230));
-        data.add(new PieChart.Data("2012",3580));
-        data.add(new PieChart.Data("2013",3850));
-        data.add(new PieChart.Data("2014",4250));
+        data.add(new PieChart.Data("2010", 2880));
+        data.add(new PieChart.Data("2011", 3230));
+        data.add(new PieChart.Data("2012", 3580));
+        data.add(new PieChart.Data("2013", 3850));
+        data.add(new PieChart.Data("2014", 4250));
         bukaData();
         miski.setData(data);
-        
+
         Agama.setValue("Islam");
         Agama.getItems().addAll("Islam", "Kristen", "Katolik", "Hindu", "Buddha", "Konghucu");
-        
+
         pekerjaan.setValue("Tidak Bekerja");
         pekerjaan.getItems().addAll("Tidak Bekerja", "Petani", "Nelayan", "Buruh", "Swasta", "Lainnya");
-    }    
-    
+    }
+
 }

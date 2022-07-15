@@ -16,7 +16,7 @@
 
 <AnchorPane id="AnchorPane" fx:id="ap" prefHeight="601.0" prefWidth="915.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sostance.DashBoardController">
     <children>
-      <BorderPane fx:id="mainPane" prefHeight="602.0" prefWidth="915.0">
+      <BorderPane fx:id="mainPane" prefHeight="601.0" prefWidth="915.0">
          <left>
             <VBox prefHeight="127.0" prefWidth="202.0" style="-fx-background-color: #d9d9d9;" BorderPane.alignment="CENTER">
                <children>
