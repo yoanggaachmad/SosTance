@@ -65,8 +65,8 @@ public class ListSubsidiKebutuhanController implements Initializable {
     ObservableList dataAll = observableArrayList();
     ObservableList<PieChart.Data> data = FXCollections.observableArrayList();
 
-    @FXML
-    private PieChart pcSubsidiKebutuhan;
+//    @FXML
+//    private PieChart pcSubsidiKebutuhan;
 
     @FXML
     private ComboBox cbalamat;
@@ -300,12 +300,12 @@ public class ListSubsidiKebutuhanController implements Initializable {
         saveXml();
 //        masukAlamat();
         System.out.println(tvList.size());
-        data.add(new PieChart.Data("2010", 2880));
-        data.add(new PieChart.Data("2011", 3230));
-        data.add(new PieChart.Data("2012", 3580));
-        data.add(new PieChart.Data("2013", 3850));
-        data.add(new PieChart.Data("2014", 4250));
-        pcSubsidiKebutuhan.setData(data);
+//        data.add(new PieChart.Data("2010", 2880));
+//        data.add(new PieChart.Data("2011", 3230));
+//        data.add(new PieChart.Data("2012", 3580));
+//        data.add(new PieChart.Data("2013", 3850));
+//        data.add(new PieChart.Data("2014", 4250));
+//        pcSubsidiKebutuhan.setData(data);
 
         cbalamat.setValue("");
         cbalamat.getItems().addAll("Sleman", "Yogyakarta", "Bantul", "Kulon Progo");

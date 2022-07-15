@@ -13,11 +13,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sostance.DB2Controller">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sostance.DB2Controller">
    <children>
       <AnchorPane id="AnchorPane" layoutX="1.0" prefHeight="602.0" prefWidth="712.0">
           <children>
-            <BorderPane fx:id="mainPane" prefHeight="200.0" prefWidth="200.0">
+            <BorderPane fx:id="mainPane" prefHeight="588.0" prefWidth="712.0">
                <left>
                   <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="601.0" prefWidth="712.0" style="-fx-background-color: #35641;" BorderPane.alignment="CENTER">
                      <children>
@@ -35,7 +35,7 @@
                         </HBox>
                         <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="712.0">
                            <children>
-                              <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="712.0">
+                              <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="537.0" prefWidth="712.0">
                                  <children>
                                     <ImageView fitHeight="389.0" fitWidth="712.0" layoutX="10.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -45,7 +45,7 @@
                                           <DropShadow />
                                        </effect>
                                     </ImageView>
-                                    <Button alignment="BOTTOM_CENTER" layoutX="361.0" layoutY="113.0" mnemonicParsing="false" prefHeight="133.0" prefWidth="142.0" style="-fx-background-color: #353641;" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                                    <Button alignment="BOTTOM_CENTER" layoutX="358.0" layoutY="112.0" mnemonicParsing="false" prefHeight="133.0" prefWidth="143.0" style="-fx-background-color: #353641;" stylesheets="@CssTest.css" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
@@ -60,16 +60,16 @@
                                                       <Insets left="14.0" />
                                                    </VBox.margin>
                                                 </ImageView>
-                                                <Label prefHeight="34.0" prefWidth="163.0" text="    Pengisian Formulir" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                                                <Label prefHeight="34.0" prefWidth="163.0" text="Pengisian Formulir" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                                                    <VBox.margin>
-                                                      <Insets />
+                                                      <Insets left="7.0" />
                                                    </VBox.margin>
                                                 </Label>
                                              </children>
                                           </VBox>
                                        </graphic>
                                     </Button>
-                                    <Button alignment="BOTTOM_CENTER" layoutX="285.0" layoutY="258.0" mnemonicParsing="false" prefHeight="133.0" prefWidth="142.0" style="-fx-background-color: #5E5f94;" textFill="WHITE">
+                                    <Button alignment="BOTTOM_CENTER" layoutX="286.0" layoutY="250.0" mnemonicParsing="false" prefHeight="133.0" prefWidth="142.0" style="-fx-background-color: #5E5f94;" stylesheets="@CssTest.css" textFill="WHITE">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
@@ -86,14 +86,14 @@
                                                 </ImageView>
                                                 <Label text="Kebutuhan Subsidi" textFill="WHITE">
                                                    <VBox.margin>
-                                                      <Insets left="10.0" />
+                                                      <Insets left="6.0" top="5.0" />
                                                    </VBox.margin>
                                                 </Label>
                                              </children>
                                           </VBox>
                                        </graphic>
                                     </Button>
-                                    <Button alignment="BOTTOM_CENTER" layoutX="436.0" layoutY="258.0" mnemonicParsing="false" prefHeight="133.0" prefWidth="142.0" style="-fx-background-color: #5E5f94;" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                                    <Button alignment="BOTTOM_CENTER" layoutX="434.0" layoutY="250.0" mnemonicParsing="false" prefHeight="133.0" prefWidth="142.0" style="-fx-background-color: #5E5f94;" stylesheets="@CssTest.css" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
@@ -108,7 +108,10 @@
                                                       <Insets left="15.0" />
                                                    </VBox.margin>
                                                 </ImageView>
-                                                <Label text=" Modal Tempat Usaha" textAlignment="CENTER" textFill="WHITE" wrapText="true" />
+                                                <Label text="Tempat Usaha" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                                                   <VBox.margin>
+                                                      <Insets left="18.0" top="5.0" />
+                                                   </VBox.margin></Label>
                                              </children>
                                           </VBox>
                                        </graphic>

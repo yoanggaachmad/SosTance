@@ -26,3 +26,16 @@
 /*    -fx-border-radius: 5px, 5px;*/
 }
 
+table-view{
+    -fx-background-radius: 25px;
+}
+
+.table-view .column-header-background{
+    -fx-background-color:  #6FCCE0;
+    -fx-background-radius: 0px 0px 0px 0px;
+}
+ 
+.table-view .column-header, .table-view.filler{
+    -fx-background-color:  transparent;
+    -fx-size: 30;
+}
