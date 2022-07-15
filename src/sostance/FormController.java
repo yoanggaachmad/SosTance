@@ -20,7 +20,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.chart.PieChart;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
@@ -38,8 +37,6 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 public class FormController implements Initializable {
-
-    ObservableList<PieChart.Data> data = FXCollections.observableArrayList();
 
     @FXML
     private TextField NamaLengkap;
@@ -70,9 +67,6 @@ public class FormController implements Initializable {
 
     @FXML
     private Button tampilkan;
-
-    @FXML
-    private PieChart miski;
 
     private String pekerjaanm, Agamam, NamaLengkapm, NIKm, KKm, Alamatm, RadioButn;
     ListIsiFormulir listformulir;
@@ -158,15 +152,9 @@ public class FormController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        listformulir = new ListIsiFormulir();
-        data.add(new PieChart.Data("2010", 2880));
-        data.add(new PieChart.Data("2011", 3230));
-        data.add(new PieChart.Data("2012", 3580));
-        data.add(new PieChart.Data("2013", 3850));
-        data.add(new PieChart.Data("2014", 4250));
-        bukaData();
-        miski.setData(data);
 
+        bukaData();
+        
         Agama.setValue("Islam");
         Agama.getItems().addAll("Islam", "Kristen", "Katolik", "Hindu", "Buddha", "Konghucu");
 
