@@ -14,7 +14,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" fx:id="ap" prefHeight="601.0" prefWidth="915.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sostance.DashBoardController">
+<AnchorPane id="AnchorPane" fx:id="ap" prefHeight="601.0" prefWidth="915.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sostance.DashBoardController">
     <children>
       <BorderPane fx:id="mainPane" prefHeight="601.0" prefWidth="915.0">
          <left>
@@ -27,13 +27,12 @@
                               <Image url="@../Gambar/programmer.png" />
                            </image>
                         </ImageView>
-                        <Text layoutX="96.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Masyarakat Indonesia" wrappingWidth="102.13671875">
+                        <Text layoutX="96.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Masyarakat Indonesia" wrappingWidth="102.13671875">
                            <font>
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Text>
-                        <Text layoutX="96.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Belum verifikasi" />
-                        <Text layoutX="96.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Id apps:9103987" />
+                        <Text layoutX="94.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Id apps: 9103987" />
                      </children>
                   </AnchorPane>
                   <AnchorPane prefHeight="490.0" prefWidth="210.0" stylesheets="@CssTest.css">
@@ -53,7 +52,7 @@
                            <font>
                               <Font name="Lucida Sans Typewriter Regular" size="12.0" />
                            </font></Button>
-                        <Button layoutX="16.0" layoutY="175.0" mnemonicParsing="false" onAction="#ListSubsidiKebutuhan" prefHeight="46.0" prefWidth="176.0" stylesheets="@CSSOWW.css" text="List Kebutuhan Bantuan Subsidi" wrapText="true">
+                        <Button layoutX="16.0" layoutY="181.0" mnemonicParsing="false" onAction="#ListSubsidiKebutuhan" prefHeight="46.0" prefWidth="176.0" stylesheets="@CSSOWW.css" text="List Kebutuhan Bantuan Subsidi" wrapText="true">
                            <graphic>
                               <HBox prefHeight="22.0" prefWidth="22.0">
                                  <children>
@@ -66,7 +65,7 @@
                               </HBox>
                            </graphic>
                         </Button>
-                        <Button layoutX="16.0" layoutY="243.0" mnemonicParsing="false" onAction="#modalButtonAction" prefHeight="46.0" prefWidth="176.0" stylesheets="@CSSOWW.css" text="Penyediaan Modal Tempat Usaha" wrapText="true">
+                        <Button layoutX="17.0" layoutY="247.0" mnemonicParsing="false" onAction="#modalButtonAction" prefHeight="46.0" prefWidth="176.0" stylesheets="@CSSOWW.css" text="Penyediaan Modal Tempat Usaha" wrapText="true">
                            <graphic>
                               <HBox prefHeight="22.0" prefWidth="22.0">
                                  <children>

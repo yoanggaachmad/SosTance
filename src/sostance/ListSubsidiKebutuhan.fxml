@@ -14,7 +14,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="601.0" prefWidth="915.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sostance.ListSubsidiKebutuhanController">
+<AnchorPane id="AnchorPane" prefHeight="601.0" prefWidth="915.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sostance.ListSubsidiKebutuhanController">
     <children>
       <BorderPane fx:id="mainPane" prefHeight="200.0" prefWidth="200.0">
          <center>
@@ -26,9 +26,9 @@
                      </image>
                   </ImageView>
                   <Label layoutX="26.0" layoutY="463.0" textFill="WHITE" />
-                  <Label layoutX="182.0" layoutY="21.0" prefHeight="42.0" prefWidth="341.0" style="-fx-background-color: #6FCCE0;" text="  LIST KEBUTUHAN SUBSIDI" textAlignment="CENTER" textFill="WHITE">
+                  <Label layoutX="150.0" layoutY="14.0" prefHeight="46.0" prefWidth="406.0" style="-fx-background-color: #6FCCE0; -fx-background-radius: 50;" text="  LIST KEBUTUHAN SUBSIDI" textAlignment="CENTER" textFill="WHITE">
                      <font>
-                        <Font name="System Bold" size="25.0" />
+                        <Font name="System Bold" size="30.0" />
                      </font>
                   </Label>
                   <Label layoutX="20.0" layoutY="80.0" text="Cek Pengambilan Subsidi Terdekat :" textFill="WHITE" />
@@ -39,7 +39,7 @@
                         <TableColumn fx:id="tcstok" prefWidth="83.19996948242186" text="Stok" />
                     </columns>
                   </TableView>
-                  <ComboBox fx:id="cbalamat" layoutX="14.0" layoutY="111.0" onAction="#masukAlamat" prefHeight="26.0" prefWidth="248.0" />
+                  <ComboBox fx:id="cbalamat" layoutX="5.0" layoutY="110.0" onAction="#masukAlamat" prefHeight="26.0" prefWidth="248.0" />
                   <Pane fx:id="pane" layoutX="420.0" layoutY="178.0" prefHeight="206.0" prefWidth="251.0" style="-fx-background-color: white; -fx-border-color: black;">
                      <children>
                         <Text layoutX="8.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="List Kebutuhanmu !">

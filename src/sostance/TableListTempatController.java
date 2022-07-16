@@ -10,6 +10,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.URL;
+import java.util.LinkedList;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import static javafx.collections.FXCollections.observableArrayList;
@@ -60,7 +61,7 @@ public class TableListTempatController implements Initializable {
     ObservableList dataTempat = observableArrayList();
 
 
-    ArrayList<IsiTempatUsaha> simpanTempat = new ArrayList<>();
+    LinkedList<IsiTempatUsaha> simpanTempat = new LinkedList<>();
 
     XStream xstream = new XStream(new StaxDriver());
 
@@ -75,7 +76,7 @@ public class TableListTempatController implements Initializable {
                 c = (char) isi;
                 s = s + c;
             }
-            simpanTempat = (ArrayList<IsiTempatUsaha>) xstream.fromXML(s);
+            simpanTempat = (LinkedList<IsiTempatUsaha>) xstream.fromXML(s);
             berkasMasuk.close();
         } catch (Exception e) {
             System.out.println("Terjadi kesalahan: " + e.getMessage());

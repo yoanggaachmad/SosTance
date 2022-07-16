@@ -10,6 +10,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.URL;
+import java.util.LinkedList;
 import java.util.ResourceBundle;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -22,6 +23,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
@@ -30,7 +32,7 @@ import javafx.stage.Stage;
  * @author ROG
  */
 public class ModalTempatUsahaController implements Initializable {
-    ArrayList<IsiTempatUsaha> simpanTempat = new ArrayList<>();
+    LinkedList<IsiTempatUsaha> simpanTempat = new LinkedList<>();
     
     private String provinsi, kabupaten, kota, kecamatan, kelurahan, alamat, tipe;
     
@@ -95,6 +97,10 @@ public class ModalTempatUsahaController implements Initializable {
         Stage stage = new Stage();
         stage.setScene(new Scene(scene2));
         stage.show();
+        stage.setTitle("Data Tempat Usaha");
+        
+        Image image = new Image("Gambar/social-care.png");
+        stage.getIcons().add(image);
     }
     
     void bukaData() {
@@ -109,7 +115,7 @@ public class ModalTempatUsahaController implements Initializable {
                 c = (char) isi;
                 s = s + c;
             }
-            simpanTempat = (ArrayList<IsiTempatUsaha>) xstream.fromXML(s);
+            simpanTempat = (LinkedList<IsiTempatUsaha>) xstream.fromXML(s);
             berkasMasuk.close();
         } catch (Exception e) {
             System.out.println("Terjadi kesalahan: " + e.getMessage());

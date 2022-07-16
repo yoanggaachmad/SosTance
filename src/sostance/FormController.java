@@ -34,6 +34,7 @@ import javafx.stage.Stage;
  */
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 public class FormController implements Initializable {
@@ -79,6 +80,10 @@ public class FormController implements Initializable {
         Stage stage = new Stage();
         stage.setScene(new Scene(scene2));
         stage.show();
+        stage.setTitle("Data Pendaftar Formulir");
+        
+        Image image = new Image("Gambar/social-care.png");
+        stage.getIcons().add(image);
     }
 
     void bukaData() {
@@ -148,6 +153,10 @@ public class FormController implements Initializable {
         Stage stage = new Stage();
         stage.setScene(new Scene(scene2));
         stage.show();
+        stage.setTitle("Diagram Profesi");
+        
+        Image image = new Image("Gambar/social-care.png");
+        stage.getIcons().add(image);
     }
 
     @Override

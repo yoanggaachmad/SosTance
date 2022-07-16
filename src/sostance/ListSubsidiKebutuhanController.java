@@ -30,6 +30,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
@@ -104,6 +105,10 @@ public class ListSubsidiKebutuhanController implements Initializable {
         Stage stage = new Stage();
         stage.setScene(new Scene(scene2));
         stage.show();
+        stage.setTitle("Data Subsidi");
+        
+        Image image = new Image("Gambar/social-care.png");
+        stage.getIcons().add(image);
     }
 
     void bukaData() {
