@@ -1,0 +1,41 @@
+.button {
+    -fx-border-color: #434952;
+    -fx-background-color:  #6FCCE0;
+    -fx-border-width: 3;
+    -fx-background-radius: 5px;
+    -fx-font-family: "Century Gothic";
+    -fx-font-size: 12px;
+    -fx-text-fill: #434952;
+    -fx-font-weight: bold; 
+    -fx-background-insets: 0 0 0 0, 0, 1, 2;
+    -fx-border-radius: 5px;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-text-fill: white;
+}
+
+.button:focused {
+    -fx-border-color:  #6FCCE0;
+    -fx-background-color: #434952;
+    -fx-border-width: 3;
+    -fx-background-radius: 5px;
+    -fx-text-fill: #F4F3FE;
+    -fx-background-insets: 0 0 0 0, 0, 1, 2;
+    -fx-border-radius: 5px, 5px;
+}
+
+table-view{
+    -fx-background-radius: 25px;
+}
+
+.table-view .column-header-background{
+    -fx-background-color:  #6FCCE0;
+    -fx-background-radius: 0px 0px 0px 0px;
+}
+ 
+.table-view .column-header, .table-view.filler{
+    -fx-background-color:  transparent;
+    -fx-size: 30;
+}

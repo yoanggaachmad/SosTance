@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="640.0" prefWidth="813.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TableListFormulirController">
+   <children>
+      <TableView fx:id="tvDataf" layoutX="2.0" layoutY="2.0" prefHeight="594.0" prefWidth="938.0">
+        <columns>
+          <TableColumn fx:id="tcNamaLengkap" prefWidth="142.39999079704285" text="Nama Lengkap" />
+            <TableColumn fx:id="tcRadioButn" prefWidth="95.20001220703125" text="Jenis Kelamin" />
+            <TableColumn fx:id="tcAgama" prefWidth="95.19996643066406" text="Agama" />
+            <TableColumn fx:id="tcPekerjaan" prefWidth="107.199951171875" text="Pekerjaan" />
+            <TableColumn fx:id="tcAlamat" prefWidth="181.60003662109375" text="Alamat" />
+            <TableColumn fx:id="tcNIK" prefWidth="151.2000732421875" text="No. NIK" />
+            <TableColumn fx:id="tcKK" prefWidth="168.800048828125" text="No. KK" />
+        </columns>
+         <stylesheets>
+            <URL value="@CssTest.css" />
+            <URL value="@../css/CssTest.css" />
+         </stylesheets>
+      </TableView>
+      <Button layoutX="2.0" layoutY="599.0" mnemonicParsing="false" onAction="#hapusButton" prefHeight="26.0" prefWidth="64.0" text="Hapus">
+         <stylesheets>
+            <URL value="@CssTest.css" />
+            <URL value="@../css/CssTest.css" />
+         </stylesheets></Button>
+   </children>
+</AnchorPane>
