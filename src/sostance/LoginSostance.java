@@ -36,6 +36,18 @@ public class LoginSostance extends Application {
      */
     public static void main(String[] args) {
         launch(args);
+        
+        //NAMA ANGGOTA KELOMPOK:
+        //1. SYAHARUL HAFIDZ (21523050)
+        //2. PATANDYA WISNU SURAYA (21523098)
+        //3. GUNTUR MAULANA PUTRA PROJO (21523149)
+        //4. YOANGGA ACHMAD DWI PASANJAYA (21523235)
+        
+        //UNTUK USERNAME DAN PASSWORD APLIKASI KAMI DAPAT DIBUAT PADA FITUR BUAT AKUN.
+        //TETAPI BERIKUT KAMI AKAN MEMBERIKAN USERNAME DAN PASSWORD YANG SUDAH KAMI BUAT
+        //DAN SUDAH TERSIMPAN DI DALAM FILE XML
+        //USERNAME: aaa
+        //PASSWORD: aaa
     }
     
 }
