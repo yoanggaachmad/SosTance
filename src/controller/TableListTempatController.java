@@ -60,8 +60,7 @@ public class TableListTempatController implements Initializable {
     @FXML
     private TableColumn<IsiTempatUsaha, String> tcTipe;
 
-    ObservableList dataTempat = observableArrayList();
-
+    ObservableList dataTempat = observableArrayList(); //nyimpan data di tabel
 
     LinkedList<IsiTempatUsaha> simpanTempat = new LinkedList<>();
 

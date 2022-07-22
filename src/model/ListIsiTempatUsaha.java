@@ -26,9 +26,9 @@ public class ListIsiTempatUsaha {
         listTempat.add(new IsiTempatUsaha(provinsi, kabupaten, kota, kecamatan, kelurahan, alamat, tipe));
     }
     
-    public void showData(){
-        for (int i = 0 ; i< 1 ; i++){
-            System.out.println(listTempat.toString());
-        }
-    }
+//    public void showData(){
+//        for (int i = 0 ; i< 1 ; i++){
+//            System.out.println(listTempat.toString());
+//        }
+//    }
 }

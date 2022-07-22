@@ -54,8 +54,8 @@ public class LoginSostanceController implements Initializable {
 
     @FXML
     private void Masuk(ActionEvent event) throws IOException {
-        String email = tfEmail.getText();
-        String password = pfPassword.getText();
+        String email = tfEmail.getText(); //menampilkan input dari user
+        String password = pfPassword.getText(); //menampilkan input dari user
 
         bukaXML();
 
@@ -79,18 +79,6 @@ public class LoginSostanceController implements Initializable {
             }
             Parent tableViewParent = FXMLLoader.load(DashBoardController.class.getResource("/view/DashBoard.fxml"));
         }
-//        Parent tableViewParent = FXMLLoader.load(DashBoardController.class.getResource("/view/DashBoard.fxml"));
-//
-//        Scene tableViewScene = new Scene(tableViewParent);
-//
-//        //This line gets the Stage information
-//        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-//
-//        window.setScene(tableViewScene);
-//        window.show();
-//
-//        simpanData();
-//        System.out.println("Masukkk");
     }
 
     @FXML
