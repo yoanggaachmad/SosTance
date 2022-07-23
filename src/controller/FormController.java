@@ -72,35 +72,35 @@ public class FormController implements Initializable {
     private Button tampilkan;
 
     private String pekerjaanm, Agamam, NamaLengkapm, NIKm, KKm, Alamatm, RadioButn;
-    ListIsiFormulir listformulir;
-    LinkedList<IsiFormulir> simpanFormulir = new LinkedList<>();
+    ListIsiFormulir listformulir;//deklarasi class observable list
+    LinkedList<IsiFormulir> simpanFormulir = new LinkedList<>();//buat larik dari kelas model Isiformulir
 
     @FXML
     private void ButtonTampilkanData(ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/TableListFormulir.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/TableListFormulir.fxml"));//load view file fxml sesuai nama yang dituliskan
         Parent scene2 = loader.load();
         Stage stage = new Stage();
         stage.setScene(new Scene(scene2));
         stage.show();
-        stage.setTitle("Data Pendaftar Formulir");
+        stage.setTitle("Data Pendaftar Formulir");//beri judul window
         
-        Image image = new Image("Gambar/social-care.png");
-        stage.getIcons().add(image);
+        Image image = new Image("Gambar/social-care.png");//tulis nama gambar yang akan dijadikan icon
+        stage.getIcons().add(image);//menampilkan gambar tersebut sebagai icon
     }
 
     void bukaData() {
         XStream xstream = new XStream(new StaxDriver());
-        FileInputStream berkasMasuk;
+        FileInputStream berkasMasuk;//buka file
         try {
-            berkasMasuk = new FileInputStream("ListTempatFormulir.xml");
+            berkasMasuk = new FileInputStream("ListTempatFormulir.xml");//membuka file xml pastikan nama nya sesuai waktu menyimpan file xml nya
             int isi;
             char c;
-            String s = "";
+            String s = "";// isi file dikembalikan menjadi string
             while ((isi = berkasMasuk.read()) != - 1) {
-                c = (char) isi;
+                c = (char) isi;//ubah biner ke string, string disimpan ke larik
                 s = s + c;
             }
-            simpanFormulir = (LinkedList<IsiFormulir>) xstream.fromXML(s);
+            simpanFormulir = (LinkedList<IsiFormulir>) xstream.fromXML(s);//dari string ke larik
             berkasMasuk.close();
         } catch (Exception e) {
             System.out.println("Terjadi kesalahan: " + e.getMessage());
@@ -137,9 +137,10 @@ public class FormController implements Initializable {
         simpanFormulir.add(new IsiFormulir(pekerjaanm, Agamam, NamaLengkapm, NIKm, KKm, Alamatm, RadioButn));
         String xml = xstream.toXML(simpanFormulir);
         FileOutputStream outDoc;
-        try {
+        try {// mengubah karakter penyusun string xml sebagai 
+            // bytes (berbentuk nomor2 kode ASCII
             byte[] data = xml.getBytes("UTF-8");
-            outDoc = new FileOutputStream("ListTempatFormulir.xml");
+            outDoc = new FileOutputStream("ListTempatFormulir.xml");// membuat nama file & folder tempat menyimpan jika perlu
             outDoc.write(data);
             outDoc.close();
         } catch (Exception io) {

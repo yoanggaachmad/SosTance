@@ -52,13 +52,13 @@ public class TableListFormulirController implements Initializable {
     @FXML 
     private TableColumn <IsiFormulir, String> tcRadioButn;
     
-    ObservableList dataFormulir = observableArrayList();
+    ObservableList dataFormulir = observableArrayList();//nyimpan data di tabel
     LinkedList<IsiFormulir> simpanFormulir = new LinkedList<>();
-    XStream xstream = new XStream(new StaxDriver());
+    XStream xstream = new XStream(new StaxDriver());//untuk proses serialisasi&deserialisasi
     
     
     void bukaData() {
-        FileInputStream berkasMasuk;
+        FileInputStream berkasMasuk;//membuka file
         try {
             berkasMasuk = new FileInputStream("ListTempatFormulir.xml");
             int isi;
@@ -66,7 +66,7 @@ public class TableListFormulirController implements Initializable {
             String s = "";
             while ((isi = berkasMasuk.read()) != - 1) {
                 c = (char) isi;
-                s = s + c;
+                s = s + c;//kumpulan char disatukan dalam objek bertipe string
             }
             simpanFormulir = (LinkedList<IsiFormulir>) xstream.fromXML(s);
             berkasMasuk.close();
@@ -76,10 +76,10 @@ public class TableListFormulirController implements Initializable {
     }
     
     void simpanData() {
-        String xml = xstream.toXML(simpanFormulir);
-        FileOutputStream outDoc;
+        String xml = xstream.toXML(simpanFormulir);//hasil konversi disimpan ke xml bertipe string
+        FileOutputStream outDoc;//menyimpan file
         try {
-            byte[] data = xml.getBytes("UTF-8");
+            byte[] data = xml.getBytes("UTF-8");//konversi string ke byte
             outDoc = new FileOutputStream("ListTempatFormulir.xml");
             outDoc.write(data);
             outDoc.close();
@@ -109,7 +109,7 @@ public class TableListFormulirController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        tcPekerjaan.setCellValueFactory(new PropertyValueFactory <> ("pekerjaanm"));
+        tcPekerjaan.setCellValueFactory(new PropertyValueFactory <> ("pekerjaanm"));//inisialisasi berdasarkan atribut
         tcAgama.setCellValueFactory(new PropertyValueFactory <> ("Agamam"));
         tcNamaLengkap.setCellValueFactory(new PropertyValueFactory <> ("NamaLengkapm"));
         tcNIK.setCellValueFactory(new PropertyValueFactory <> ("NIKm"));
