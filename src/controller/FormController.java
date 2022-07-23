@@ -89,7 +89,7 @@ public class FormController implements Initializable {
     }
 
     void bukaData() {
-        XStream xstream = new XStream(new StaxDriver());
+        XStream xstream = new XStream(new StaxDriver());//deserialisasi
         FileInputStream berkasMasuk;//buka file
         try {
             berkasMasuk = new FileInputStream("ListTempatFormulir.xml");//membuka file xml pastikan nama nya sesuai waktu menyimpan file xml nya
@@ -109,7 +109,7 @@ public class FormController implements Initializable {
 
     @FXML
     private void ButtonSimpan(ActionEvent event) throws IOException {
-        XStream xstream = new XStream(new StaxDriver());
+        XStream xstream = new XStream(new StaxDriver());//serialisasi
 
         String tTipe = "";
         if (jens.isSelected()) {
@@ -134,7 +134,7 @@ public class FormController implements Initializable {
         RadioButn = tTipe;
         System.out.println(RadioButn);
 
-        simpanFormulir.add(new IsiFormulir(pekerjaanm, Agamam, NamaLengkapm, NIKm, KKm, Alamatm, RadioButn));
+        simpanFormulir.add(new IsiFormulir(pekerjaanm, Agamam, NamaLengkapm, NIKm, KKm, Alamatm, tTipe));
         String xml = xstream.toXML(simpanFormulir);
         FileOutputStream outDoc;
         try {// mengubah karakter penyusun string xml sebagai 

@@ -65,7 +65,8 @@ public class TableSubsidiController implements Initializable {
     void simpanData() {
         String xml = xstream.toXML(dataKebutuhan);
         FileOutputStream outDoc;
-        try {
+        try {// mengubah karakter penyusun string xml sebagai 
+            // bytes (berbentuk nomor2 kode ASCII
             byte[] data = xml.getBytes("UTF-8");
             outDoc = new FileOutputStream("ListKebutuhan.xml");
             outDoc.write(data);
